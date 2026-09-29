@@ -1,35 +1,44 @@
-*{
+/*Global Reset*/
+* {
     margin: 0;
     padding: 0;
 }
 
+/* Roboto and Fraunces fonts import*/
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+/*Body*/
+body {
+    font-family: 'Fraunces', 'Roboto', sans-serif;
+}
+
 /*NavBar*/
 .navbar {
-    display:flex;
+    display: flex;
     align-items: center;
     justify-content: space-around;
     background-color: #ecf3f7;
     position: sticky;
-    top:0;
+    top: 0;
 }
 
-.logo-container{
+.logo-container {
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 20px;
 }
 
-.logo{
+.logo {
     height: 8vh;
     width: auto;
 }
 
-.nav{
+.nav {
     display: flex;
 }
 
-.nav-link{
+.nav-list {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -37,14 +46,14 @@
     gap: 60px;
 }
 
-a{
+.nav-a-link {
     display: flex;
     text-decoration: none;
     align-items: center;
 }
 
 
-.navbar-icon{
+.navbar-icon {
     height: 4vh;
     width: auto;
     padding-right: 2rem;
