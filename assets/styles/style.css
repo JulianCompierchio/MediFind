@@ -85,7 +85,7 @@ body {
     color: var(--secondary-color);
 }
 
-.home-images-container {
+.images-container {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -94,14 +94,15 @@ body {
     margin-top: 2rem;
 }
 
-.home-image {
+.image {
     height: 50vh;
     width: 50vh;
     border-radius: 20px;
 }
 
-.home-image-text {
+.image-text {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     height: 20vh;
@@ -112,9 +113,10 @@ body {
     text-align: center;
     padding-left: 3vh;
     padding-right: 3vh;
+    gap: 1vh;
 }
 
-.home-article {
+.article {
     display: flex;
     flex-direction: column;
     justify-content: center;
