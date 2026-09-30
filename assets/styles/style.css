@@ -121,3 +121,29 @@ body {
     align-items: center;
     gap: 2rem;
 }
+
+/*FOOTER*/
+.footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 15vh;
+    background-color: var(--tertiary-color);
+    margin-top: 2rem;
+    color: var(--secondary-color);
+    gap: 1rem;
+}
+
+.footer-icon {
+    height: 3vh;
+    width: auto;
+    margin-right: 1vh;
+}
+
+.footer-icon-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
