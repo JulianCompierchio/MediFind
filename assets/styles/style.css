@@ -16,6 +16,9 @@
 /*Body*/
 body {
     font-family: 'Fraunces', 'Roboto', sans-serif;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
 /*HEADER*/
@@ -113,7 +116,7 @@ body {
     text-align: center;
     padding-left: 3vh;
     padding-right: 3vh;
-    gap: 1vh;
+    margin-bottom: 4vh;
 }
 
 .article {
@@ -124,6 +127,49 @@ body {
     gap: 2rem;
 }
 
+.contact-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: 65vh;
+    width: 60vh;
+    background-color: var(--secondary-color);
+    color: var(--tertiary-color);
+    border-radius: 30px;
+    text-align: center;
+    margin: 5vh 0;
+    list-style: none;
+}
+
+.contact-main {
+    flex: 1;
+    background-image: url("../images/contact-background.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: auto;
+}
+
+.contact-item {
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: center;
+    background-color: var(--primary-color);
+    border-radius: 20px;
+    padding-right: 2vh;
+    width: 40vh;
+}
+
+.contact-icon {
+    height: 8vh;
+    width: auto;
+    padding-right: 1vh;
+}
+
+
+
 /*FOOTER*/
 .footer {
     display: flex;
@@ -132,7 +178,6 @@ body {
     flex-direction: column;
     height: 15vh;
     background-color: var(--tertiary-color);
-    margin-top: 2rem;
     color: var(--secondary-color);
     gap: 1rem;
 }
@@ -147,5 +192,4 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-
 }
