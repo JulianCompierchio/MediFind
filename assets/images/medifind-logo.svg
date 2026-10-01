@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 240" role="img" aria-label="MediFind logo">
+<!-- Icon -->
+<g transform="translate(0,0)">
+    <!-- soft outer ring -->
+    <circle cx="120" cy="120" r="104" fill="#83b3e9" opacity="0.55"/>
+    <!-- main disc -->
+    <circle cx="120" cy="120" r="92" fill="#f7f2f2" opacity="0.95"/>
+
+    <!-- cross arms -->
+    <rect x="108" y="32"  width="24" height="176" rx="12" fill="#83b3e9"/>
+    <rect x="32"  y="108" width="176" height="24"  rx="12" fill="#83b3e9"/>
+
+    <!-- center -->
+    <circle cx="120" cy="120" r="36" fill="rgb(100, 154, 216)" opacity="0.65"/>
+    <circle cx="120" cy="120" r="26" fill="rgb(100, 154, 216)" opacity="0.95"/>
+
+    <!-- dots -->
+    <circle cx="78"  cy="86"  r="7" fill="#83b3e9"/>
+    <circle cx="162" cy="86"  r="7" fill="#83b3e9"/>
+    <circle cx="78"  cy="154" r="7" fill="#83b3e9"/>
+    <circle cx="162" cy="154" r="7" fill="#83b3e9"/>
+</g>
+
+<!-- Wordmark -->
+<text x="260" y="175"
+        font-family="Montserrat, Poppins, Inter, Arial, sans-serif"
+        font-size="160"
+        font-weight="800"
+        letter-spacing="-2">
+    <tspan fill="#83b3e9">Medi</tspan><tspan fill="#111111">Find</tspan>
+</text>
+</svg>
