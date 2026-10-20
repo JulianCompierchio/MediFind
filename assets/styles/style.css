@@ -97,12 +97,14 @@ body {
 .images-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr));
+    grid-template-areas: "image image-text";
     width: 100%;
     gap: 20px;
     margin-top: 2vh;
 }
 
 .image {
+    grid-area: image;
     height: 30vh;
     width: 30vh;
     border-radius: 20px;
@@ -110,6 +112,7 @@ body {
 
 .image-text {
     display: flex;
+    grid-area: image-text;
     flex-direction: column;
     justify-content: center;
     align-items: center;
