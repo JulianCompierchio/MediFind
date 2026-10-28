@@ -9,6 +9,8 @@ _pycache_/
 
 # Dependencias
 node_modules/
+package-lock.json
+package.json
 
 # Editores
 .vscode/
