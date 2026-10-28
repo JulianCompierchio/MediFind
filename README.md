@@ -13,6 +13,7 @@ Aplicación web creada como práctica para aprender HTML, CSS, Git y GitHub.
 5. Abrir un Pull Request hacia `main` detallando las modificaciones para su revisión y posterior integración.
 ## Instalación y visualización
 1. Clonar el repositorio:
-   ```bash git clone https://github.com/JulianCompierchio/MediFind.git
+   ``` bash 
+   git clone https://github.com/JulianCompierchio/MediFind.git
 ## Autores 
 Compierchio Julian
