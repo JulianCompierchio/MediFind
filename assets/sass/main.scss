@@ -1,0 +1,16 @@
+//sass --watch assets/sass/main.scss  assets/styles/style.css
+@use './utilities/variables';
+@use './utilities/mixin';
+@use './utilities/animation';
+
+@use './base/tipography';
+@use './base/base';
+
+@use './layout/header';
+@use './layout/nav';
+@use './layout/footer';
+@use './layout/home';
+@use "./layout/trending";
+@use "./layout/contact";
+
+@use './components/cards';

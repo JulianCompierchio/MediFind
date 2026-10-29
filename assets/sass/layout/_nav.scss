@@ -1,0 +1,34 @@
+@use '../utilities/variables' as v;
+@use '../utilities/mixin' as m;
+
+.nav {
+    @include m.flex-red(center, center);
+    background-color: v.$tertiary-color;
+
+    .nav-list {
+        @include m.flex(row, wrap, center, center, 0);
+        list-style: none;
+        margin: 0;
+
+
+        .nav-a-link {
+            @include m.flex-red(center, center);
+            text-decoration: none;
+            height: 8vh;
+            color: v.$primary-color;
+            margin: 0 3vh;
+
+            &:hover,
+            &:focus,
+            &:active {
+                color: v.$secondary-color;
+            }
+
+            .navbar-icon {
+                height: 4vh;
+                width: auto;
+                padding-right: 2rem;
+            }
+        }
+    }
+}

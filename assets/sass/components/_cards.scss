@@ -1,0 +1,104 @@
+@use '../utilities/variables' as v;
+@use '../utilities/mixin' as m;
+
+.images-container {
+    @include m.grid(repeat(auto-fit, minmax(min(100%, 300px), 1fr)),
+        auto,
+        20px);
+
+    width: 100%;
+    margin-top: 2vh;
+}
+
+.article {
+    @include m.grid-areas("image"
+        "image-text",
+        2rem);
+
+    gap: 2rem;
+    justify-items: center;
+    min-width: 0;
+}
+
+.image {
+    width: 30vh;
+    height: 30vh;
+    object-fit: cover;
+    border-radius: v.$border-radius;
+
+    &:hover {
+        transform: scale(1.05);
+        transition: transform 0.5s ease-in-out;
+        overflow: hidden;
+    }
+}
+
+.image-text {
+    @include m.flex(column, nowrap, center, center, 0);
+
+    grid-area: image-text;
+    min-width: 0;
+    height: 20vh;
+    width: 22vh;
+    padding: 0 4vh;
+    background-color: v.$tertiary-color;
+    color: v.$secondary-color;
+    border-radius: v.$border-radius;
+    text-align: center;
+    margin: 0 0 4vh;
+    font-size: 0.8rem;
+
+    h3 {
+        font-size: 0.9rem;
+        font-weight: bold;
+        line-height: normal;
+        margin: 0;
+        color: inherit;
+    }
+
+    &:hover {
+        transform: scale(1.05);
+        transition: transform 0.5s ease-in-out;
+        overflow: hidden;
+    }
+}
+
+
+@include m.tablet {
+    .images-container {
+        @include m.grid(repeat(2, minmax(0, 1fr)), auto, 20px);
+        width: 100%;
+    }
+
+    .article {
+        width: 100%;
+        min-width: 0;
+        grid-template-columns: minmax(0, 1fr);
+        justify-items: center;
+    }
+
+    .image {
+        max-width: 100%;
+    }
+
+    .image-text {
+        max-width: 100%;
+        box-sizing: border-box;
+    }
+}
+
+@include m.desktop {
+    .image {
+        height: 35vh;
+        width: 35vh;
+    }
+
+    .image-text {
+        font-size: 1.1rem;
+        width: 32vh;
+
+        h3 {
+            font-size: 1.2rem;
+        }
+    }
+}

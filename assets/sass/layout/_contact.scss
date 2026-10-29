@@ -1,0 +1,107 @@
+@use '../utilities/variables' as v;
+@use '../utilities/mixin' as m;
+
+.contact-container {
+    @include m.flex(column, nowrap, space-around, center, 0);
+    height: 65vh;
+    width: 35vh;
+    background-color: v.$secondary-color;
+    color: v.$tertiary-color;
+    border-radius: v.$border-radius;
+    text-align: center;
+    margin: 5vh 0;
+    padding: 2vh 0;
+    box-sizing: border-box;
+    list-style: none;
+}
+
+.contact-main {
+    flex: 1;
+    background-image: url("../images/contact-background.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: auto;
+
+    .contact-item {
+        @include m.flex(row, nowrap, flex-start, center, 1vh);
+
+        background-color: v.$primary-color;
+        border-radius: v.$border-radius;
+        padding: 1vh;
+        width: 25vh;
+        min-width: 0;
+        box-sizing: border-box;
+        height: auto;
+        min-height: 12vh;
+
+        figcaption {
+            flex: 1;
+            min-width: 0;
+            overflow-wrap: anywhere;
+            word-break: normal;
+        }
+
+        .contact-icon {
+            height: 8vh;
+            width: auto;
+            flex-shrink: 0;
+
+            &:hover {
+                animation: girar-icono 1s ease-in-out;
+                transform-style: preserve-3d;
+            }
+        }
+    }
+}
+
+
+@include m.desktop {
+    .contact-container {
+        width: 60vh;
+        min-height: 65vh;
+        height: auto;
+        padding: 3vh;
+    }
+
+    .contact-main {
+        .contact-item {
+            width: 50vh;
+            min-height: 12vh;
+            padding: 1.5vh;
+
+            .contact-icon {
+                height: 10vh;
+            }
+
+            figcaption {
+                font-size: 1.1rem;
+            }
+        }
+    }
+}
+
+@include m.tablet {
+    .contact-container {
+        width: 50vh;
+        min-height: 65vh;
+        height: auto;
+        padding: 3vh;
+    }
+
+    .contact-main {
+        .contact-item {
+            width: 40vh;
+            min-height: 12vh;
+            padding: 1.5vh;
+
+            .contact-icon {
+                height: 10vh;
+            }
+
+            figcaption {
+                font-size: 1.1rem;
+            }
+        }
+    }
+}

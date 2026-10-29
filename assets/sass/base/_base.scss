@@ -1,0 +1,42 @@
+@use "../utilities/mixin" as m;
+@use "../utilities/variables" as v;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    min-height: 100vh;
+    @include m.flex(column, nowrap, flex-start, stretch, 0);
+
+    .main {
+        @include m.flex(column, nowrap, center, center, 0);
+        flex: 1;
+
+        p,
+        figure {
+            margin: 0;
+        }
+    }
+
+    a {
+        &:hover {
+            color: v.$secondary-color;
+            transform: scale(1.05);
+            transition: transform 0.5s ease-out;
+        }
+
+        &:focus {
+            color: v.$secondary-color;
+        }
+    }
+}
+
+@include m.desktop {
+    body {
+        font-size: 1.1rem;
+    }
+}
