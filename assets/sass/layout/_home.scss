@@ -1,0 +1,13 @@
+@use "../utilities/variables" as v;
+@use "../utilities/mixin" as m;
+
+.slogan1 {
+    margin: 2rem 0 1rem;
+    color: v.$primary-color;
+}
+
+.slogan2 {
+    margin: 2rem 0 1rem;
+    color: v.$secondary-color;
+    text-align: center;
+}

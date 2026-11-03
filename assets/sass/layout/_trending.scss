@@ -1,0 +1,77 @@
+@use '../utilities/variables' as v;
+@use '../utilities/mixin' as m;
+
+
+.trending-carousel-container {
+    @include m.flex(column, nowrap, center, center, 0);
+
+    width: 100%;
+    height: auto;
+    min-height: 80vh;
+    margin-top: 2vh;
+
+
+    .carousel-image {
+        display: block;
+        height: 30vh;
+        width: 30vh;
+        max-width: 100%;
+        object-fit: cover;
+        border-radius: v.$border-radius;
+
+
+        &:hover {
+            transform: scale(1.05);
+            transition: transform 0.5s ease-in-out;
+        }
+    }
+
+    .carousel-text-dark,
+    .carousel-text-bright {
+        border-radius: v.$border-radius;
+        padding: 1vh;
+        margin-bottom: 2vh;
+        font-size: 0.8rem;
+    }
+
+    .carousel-text-dark {
+        color: black;
+    }
+
+    .carousel-text-bright {
+        color: white;
+    }
+
+    .carousel-control-prev-icon,
+    .carousel-control-next-icon {
+        filter: brightness(0) saturate(100%) invert(16%) sepia(48%) saturate(2500%) hue-rotate(195deg) brightness(85%) contrast(105%);
+    }
+}
+
+@include m.tablet {
+    .trending-carousel-container {
+        .carousel-image {
+            height: 50vh;
+            width: 50vh;
+        }
+
+        .carousel-text-dark,
+        .carousel-text-bright {
+            font-size: 1rem;
+        }
+    }
+}
+
+@include m.desktop {
+    .trending-carousel-container {
+        .carousel-image {
+            height: 60vh;
+            width: 80vh;
+        }
+
+        .carousel-text-dark,
+        .carousel-text-bright {
+            font-size: 1.2rem;
+        }
+    }
+}

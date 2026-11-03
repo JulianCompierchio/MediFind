@@ -1,0 +1,41 @@
+@use "../utilities/variables" as v;
+@use "../utilities/mixin" as m;
+@use "../utilities/animation" as a;
+
+.header {
+    @include m.flex(row, wrap, space-around, center, 0);
+    background-color: v.$tertiary-color;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+
+    .logo-container {
+        @include m.flex-red(center, center);
+        width: 16rem;
+        perspective: 600px;
+
+        .logo {
+            height: 8vh;
+            width: 16rem;
+
+            &:hover {
+                animation: girar-logo 1.5s ease-in-out;
+                transform-style: preserve-3d;
+            }
+        }
+    }
+
+
+}
+
+@include m.xs-mobile {
+    .header {
+        .logo-container {
+            width: 11rem;
+
+            .logo {
+                width: 11rem;
+            }
+        }
+    }
+}

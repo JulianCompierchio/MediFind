@@ -1,0 +1,49 @@
+@use "../utilities/variables" as v;
+@use "../utilities/mixin" as m;
+
+
+.footer {
+    @include m.flex(column, nowrap, center, center, 0.4rem);
+
+    min-height: 15vh;
+    height: auto;
+    flex-shrink: 0;
+    margin-top: auto;
+    padding: 0.5rem 1rem;
+    gap: 1rem;
+
+    background: linear-gradient(90deg,
+            v.$tertiary-color,
+            v.$primary-color,
+            v.$tertiary-color );
+
+    background-size: 300% 300%;
+    color: v.$secondary-color;
+    animation: fondo-footer 5s ease-in-out infinite;
+
+    .footer-icon-container {
+        @include m.flex(row, nowrap, center, center, 0.5rem);
+
+        width: 100%;
+        text-align: center;
+        margin: 0;
+        line-height: 1.2;
+
+        p {
+            margin: 0;
+            line-height: 1.2;
+        }
+    }
+
+    .footer-icon {
+        display: block;
+        height: 1.2rem;
+        width: auto;
+        margin: 0;
+        flex-shrink: 0;
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+        animation: none;
+    }
+}
